@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Мой простой сайт</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body {
+      background: #f3f4f6;
+      color: #111827;
+      display: flex;
+      justify-content: center;
+      padding: 40px 16px;
+    }
+
+    .card {
+      background: #ffffff;
+      max-width: 700px;
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 15px 30px rgba(15, 23, 42, 0.12);
+      padding: 24px 24px 28px;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .avatar {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #6366f1, #ec4899);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 700;
+      font-size: 24px;
+    }
+
+    .title-block h1 {
+      font-size: 24px;
+      margin-bottom: 4px;
+    }
+
+    .title-block p {
+      font-size: 14px;
+      color: #6b7280;
+    }
+
+    .section-title {
+      font-size: 16px;
+      font-weight: 600;
+      margin: 20px 0 8px;
+    }
+
+    .tagline {
+      margin-bottom: 16px;
+      color: #374151;
+      line-height: 1.5;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .skill-pill {
+      font-size: 12px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: #eef2ff;
+      color: #4f46e5;
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 8px;
+    }
+
+    .link-btn {
+      text-decoration: none;
+      font-size: 14px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1px solid #e5e7eb;
+      background: #111827;
+      color: #f9fafb;
+      transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
+    }
+
+    .link-btn.secondary {
+      background: #ffffff;
+      color: #111827;
+    }
+
+    .link-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 16px rgba(15, 23, 42, 0.18);
+      background: #1f2937;
+      color: #f9fafb;
+    }
+
+    .link-btn.secondary:hover {
+      background: #f3f4f6;
+      color: #111827;
+    }
+
+    .footer {
+      margin-top: 24px;
+      font-size: 12px;
+      color: #9ca3af;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .footer span {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #10b981;
+    }
+
+    @media (max-width: 480px) {
+      .card {
+        padding: 18px 16px 22px;
+      }
+      .header {
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="header">
+      <div class="avatar">U</div>
+      <div class="title-block">
+        <h1>Привет! Это мой сайт 🤟</h1>
+        <p>Простой одностраничный сайт на чистом HTML + CSS</p>
+      </div>
+    </div>
+
+    <p class="tagline">
+      Здесь может быть ваша визитка, портфолио, страница проекта или просто
+      эксперимент с веб-разработкой. Всё, что ниже, можно легко поменять под себя.
+    </p>
+
+    <h2 class="section-title">Что я могу рассказать на этой странице?</h2>
+    <ul style="margin-left: 18px; line-height: 1.6; font-size: 14px; color: #374151;">
+      <li>Кто я и чем занимаюсь</li>
+      <li>Ссылки на соцсети, GitHub, Telegram</li>
+      <li>Проекты, над которыми работаю</li>
+      <li>И любые другие вещи, которые мне нравятся 🙂</li>
+    </ul>
+
+    <h2 class="section-title">Навыки / интересы</h2>
+    <div class="skills">
+      <span class="skill-pill">HTML &amp; CSS</span>
+      <span class="skill-pill">JavaScript</span>
+      <span class="skill-pill">Дизайн</span>
+      <span class="skill-pill">Музыка</span>
+      <span class="skill-pill">Игры</span>
+    </div>
+
+    <h2 class="section-title">Полезные ссылки</h2>
+    <div class="links">
+      <a class="link-btn" href="https://google.com" target="_blank">Google</a>
+      <a class="link-btn secondary" href="https://github.com" target="_blank">GitHub</a>
+      <a class="link-btn secondary" href="https://codepen.io" target="_blank">CodePen</a>
+    </div>
+
+    <div class="footer">
+      <span><span class="dot"></span> Сайт сделан на чистом HTML и CSS</span>
+      <span>Можно редактировать прямо в блокноте ✏️</span>
+    </div>
+  </div>
+</body>
+</html>
